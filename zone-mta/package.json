@@ -1,0 +1,20 @@
+{
+  "name": "zone-mta",
+  "version": "1.0.0",
+  "description": "GenWork MailRouter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --max-old-space-size=1024 index.js --config=config/zonemta.toml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "zone-mta": "https://github.com/mickael-btc/zone-mta.git",
+    "zonemta-delivery-counters": "1.0.1",
+    "zonemta-limiter": "1.0.0",
+    "zonemta-loop-breaker": "1.0.2"
+  },
+  "author": "Mickael Bobovitch",
+  "license": "MIT"
+}

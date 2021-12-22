@@ -1,0 +1,45 @@
+# This is the main config file
+
+name="ZoneMTA"
+
+# Process identifier
+ident="zone-mta"
+
+# Run as the following user. Only use this if the application starts up as root
+#user="zonemta"
+#group="zonemta"
+
+[log]
+# Logging options
+# @include "log.toml"
+
+[dbs]
+# MongoDB and Redis connection options
+mongo="mongodb://127.0.0.1:27017/zone-mta"
+redis="redis://localhost:6379/2"
+# Database name for ZoneMTA data in MongoDB. In most cases it should be the same as in the connection string
+sender="zone-mta"
+
+[queue]
+# @include "queue.toml"
+
+[dns]
+# @include "dns.toml"
+
+[api]
+port=12080
+
+[smtpInterfaces]
+# @include "interfaces/*.toml"
+
+[plugins]
+# @include "plugins/*.toml"
+
+[pools]
+# @include "pools.toml"
+
+[zones]
+# @include "zones/*.toml"
+
+[domainConfig]
+# @include "domains.toml"

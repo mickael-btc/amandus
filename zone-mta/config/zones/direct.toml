@@ -1,0 +1,6 @@
+[direct]
+preferIPv6=false
+ignoreIPv6=true
+processes=1
+connections=1
+pool="direct"

@@ -1,0 +1,29 @@
+# Default SMTP interface for accepting mail for delivery
+
+[feeder]
+enabled=false
+
+# How many worker processes to spawn
+processes=1
+
+# Maximum allowed message size 30MB
+maxSize=20971520
+
+# Local IP and port to bind to
+host="127.0.0.1"
+port=2525
+
+# Set to true to require authentication
+# If authentication is enabled then you need to use a plugin with an authentication hook
+authentication=false
+
+# How many recipients to allow per message
+maxRecipients=1000
+
+# Set to true to enable STARTTLS. Do not forget to change default TLS keys
+starttls=false
+
+# set to true to start in TLS mode if using port 465
+# this probably does not work as TLS support with 465 in ZoneMTA is a bit buggy
+secure=false
+
