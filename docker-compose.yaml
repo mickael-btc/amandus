@@ -28,7 +28,8 @@ services:
     volumes:
       - ./zone-mta:/usr/src/app
     ports:
-      - "127.0.0.1:12080:12080"
+      - "127.0.0.1:12080:12080" # api server
+      - "127.0.0.1:12081:12081" # queue server
     depends_on:
       - redis
       - mongo
