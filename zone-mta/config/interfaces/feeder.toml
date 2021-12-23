@@ -10,7 +10,7 @@ processes=1
 maxSize=20971520
 
 # Local IP and port to bind to
-host="127.0.0.1"
+host="0.0.0.0"
 port=2525
 
 # Set to true to require authentication
