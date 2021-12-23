@@ -1,4 +1,5 @@
 # Powerfull Email Router
 
 ## How to Run
-chmod +x amandus.sh
+first do `chmod +x amandus.sh`
+then `./amandus.sh`
