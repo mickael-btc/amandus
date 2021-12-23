@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+
+  redis:
+    image: "redis"
+    restart: always
+    ports:
+      - "127.0.0.1:6379:6379"
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.2
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - ./data/db:/data/db
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.3
+
+  zone-mta:
+    build: ./zone-mta
+    restart: always
+    volumes:
+      - ./zone-mta:/usr/src/app
+    ports:
+      - "127.0.0.1:12080:12080"
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      SENDER_DOMAIN: amandus.fr
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.4
+
+networks:
+  mynetwork:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
