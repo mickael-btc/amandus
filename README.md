@@ -1,5 +1,11 @@
 # Powerfull Email Router
 
 ## How to Run
-first do `chmod +x amandus.sh`
-then `./amandus.sh`
+run the installer:
+```bash
+./install.sh
+```
+then run the server:
+```bash
+./amandus
+```
