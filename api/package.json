@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node api.js",
+    "dev": "nodemon api.js",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "npmlog": "^6.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.5.0"
+    "eslint": "^8.5.0",
+    "nodemon": "^2.0.15"
   }
 }
