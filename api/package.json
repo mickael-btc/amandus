@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "api.js",
+  "author": "Mickael Bobovitch",
+  "license": "MIT",
   "scripts": {
     "start": "node api.js",
     "lint": "eslint ."
   },
-  "author": "Mickael Bobovitch",
-  "license": "MIT",
   "dependencies": {
     "@types/npmlog": "^4.1.4",
     "axios": "^0.24.0",

@@ -5,7 +5,6 @@ const dkimkeygen = require("../service/dkimkeygen");
 
 const logger = require("npmlog");
 
-// TODO: add logging
 router.get("/", async (req, res) => {
   const result = await dkim
     .find({}, ["_id", "domain", "selector"])
