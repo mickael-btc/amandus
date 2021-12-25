@@ -1,0 +1,9 @@
+# mongodb connection string for the main database
+mongo="mongodb://mongo/wildduck"
+
+# redis connection string to connect to a single master (see below for Sentinel example)
+redis="redis://redis/3"
+
+# Optional database name or connection url for ZoneMTA queue database. This is
+# used to push outbound emails to the sending queue
+sender="zone-mta"

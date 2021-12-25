@@ -1,0 +1,17 @@
+[log]
+    level="error"
+
+[dbs]
+    # mongodb connection string for the main database
+    mongo="mongodb://mongo/wildduck-test"
+
+    # redis connection string
+    redis="redis://redis/13"
+
+    dbname="wildduck-test"
+
+[imap]
+
+[lmtp]
+    enabled=true
+    port=2424
