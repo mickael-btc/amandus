@@ -58,9 +58,30 @@ services:
       - api
     environment:
       SENDER_DOMAIN: amandus.fr
+      LOG_LEVEL: info
     networks:
       mynetwork:
         ipv4_address: 172.20.0.5
+    tty: true
+    command: npm run start
+    # logging:
+    #   driver: none
+  
+  wildduck:
+    build: ./wildduck
+    restart: always
+    volumes:
+      - ./wildduck:/usr/src/app
+    ports:
+      - 127.0.0.1:8080:8080
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      LOG_LEVEL: debug
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.6
     tty: true
     command: npm run start
 

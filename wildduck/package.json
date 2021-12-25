@@ -1,100 +1,18 @@
 {
-    "name": "wildduck",
-    "version": "1.36.0",
-    "description": "IMAP/POP3 server built with Node.js and MongoDB",
-    "main": "server.js",
-    "scripts": {
-        "test": "mongo --eval 'db.dropDatabase()' wildduck-test && redis-cli -n 13 flushdb && NODE_ENV=test grunt",
-        "apidoc": "apidoc -i lib/api/ -o docs/api/",
-        "show": "NODE_CONFIG_ONLY=true node server.js",
-        "start": "node server.js"
-    },
-    "keywords": [
-        "imap",
-        "mail server"
-    ],
-    "author": {
-        "name": "Andris Reinman",
-        "email": "andris@kreata.ee"
-    },
-    "license": "EUPL-1.2",
-    "devDependencies": {
-        "ajv": "8.6.3",
-        "chai": "4.3.4",
-        "docsify-cli": "4.4.3",
-        "eslint": "8.0.0",
-        "eslint-config-nodemailer": "1.2.0",
-        "eslint-config-prettier": "8.3.0",
-        "grunt": "1.4.1",
-        "grunt-cli": "1.4.3",
-        "grunt-eslint": "23.0.0",
-        "grunt-mocha-test": "0.13.3",
-        "grunt-shell-spawn": "0.4.0",
-        "grunt-wait": "0.3.0",
-        "imapflow": "1.0.74",
-        "mailparser": "3.4.0",
-        "mocha": "9.1.2",
-        "request": "2.88.2",
-        "supertest": "6.1.6"
-    },
-    "dependencies": {
-        "@fidm/x509": "1.2.1",
-        "@phc/pbkdf2": "1.1.14",
-        "@root/acme": "3.1.0",
-        "@root/csr": "0.8.1",
-        "accesscontrol": "2.2.1",
-        "argon2-browser": "1.18.0",
-        "axios": "0.22.0",
-        "base32.js": "0.1.0",
-        "bcryptjs": "2.4.3",
-        "bull": "3.29.2",
-        "gelf": "2.0.1",
-        "generate-password": "1.6.1",
-        "he": "1.2.0",
-        "html-to-text": "8.0.0",
-        "humanname": "0.2.2",
-        "iconv-lite": "0.6.3",
-        "ioredfour": "1.2.0-ioredis-06",
-        "ioredis": "4.27.11",
-        "ipaddr.js": "2.0.1",
-        "isemail": "3.2.0",
-        "joi": "17.4.2",
-        "js-yaml": "4.1.0",
-        "key-fingerprint": "1.1.0",
-        "libbase64": "1.2.1",
-        "libmime": "5.0.0",
-        "libqp": "1.1.0",
-        "mailsplit": "5.3.1",
-        "mobileconfig": "2.4.0",
-        "mongo-cursor-pagination": "7.6.0",
-        "mongodb": "4.1.3",
-        "mongodb-extended-json": "1.11.1",
-        "node-forge": "0.10.0",
-        "nodemailer": "6.7.0",
-        "npmlog": "5.0.1",
-        "openpgp": "5.0.0",
-        "pem-jwk": "2.0.0",
-        "punycode": "2.1.1",
-        "pwnedpasswords": "1.0.5",
-        "qrcode": "1.4.4",
-        "restify": "8.6.0",
-        "restify-cors-middleware2": "2.1.2",
-        "restify-logger": "2.0.1",
-        "saslprep": "1.0.3",
-        "seq-index": "1.1.0",
-        "smtp-server": "3.9.0",
-        "speakeasy": "2.0.0",
-        "u2f": "0.1.3",
-        "unixcrypt": "1.0.13",
-        "uuid": "8.3.2",
-        "wild-config": "1.5.1",
-        "yargs": "17.2.1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/wildduck-email/wildduck.git"
-    },
-    "engines": {
-        "node": ">=12.0.0"
-    }
+  "name": "wildduck",
+  "version": "1.0.0",
+  "description": "GenWork MailRouter",
+  "main": "index.js",
+  "author": "Mickael Bobovitch",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js --config=config/wildduck.toml",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "wildduck": "^1.36.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0"
+  }
 }

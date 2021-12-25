@@ -1,1 +1,0 @@
-**These files are only for development purposes.**
