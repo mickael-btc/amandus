@@ -7,6 +7,8 @@ services:
     restart: always
     ports:
       - "127.0.0.1:6379:6379"
+    logging:
+      driver: none
     networks:
       mynetwork:
         ipv4_address: 172.20.0.2
@@ -17,11 +19,30 @@ services:
     ports:
       - "127.0.0.1:27017:27017"
     volumes:
-      - ./data/db:/data/db
+      - ./data/mongodb:/data/db
+    logging:
+      driver: none
     networks:
       mynetwork:
         ipv4_address: 172.20.0.3
 
+  api:
+    build: ./api
+    restart: always
+    volumes:
+      - ./api:/usr/src/app
+    ports:
+      - "127.0.0.1:8513:8513"
+    depends_on:
+      - mongo
+    environment:
+      DB_NAME: x513
+      LOG_LEVEL: info
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.4
+    tty: true
+  
   zone-mta:
     build: ./zone-mta
     restart: always
@@ -33,11 +54,13 @@ services:
     depends_on:
       - redis
       - mongo
+      - api
     environment:
       SENDER_DOMAIN: amandus.fr
     networks:
       mynetwork:
-        ipv4_address: 172.20.0.4
+        ipv4_address: 172.20.0.5
+    tty: true
 
 networks:
   mynetwork:
