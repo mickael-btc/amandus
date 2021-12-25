@@ -1,4 +1,4 @@
-# Powerfull Email Router
+# Powerfull NewsLetter Engine
 
 ## How to Run
 run the installer:
