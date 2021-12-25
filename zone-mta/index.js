@@ -1,1 +1,1 @@
-require('zone-mta');
+require("zone-mta");

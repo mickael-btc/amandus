@@ -4,7 +4,7 @@ require("dotenv").config();
 module.exports.title = "Header Patch Plugin";
 
 module.exports.init = (app, done) => {
-  app.addHook("sender:headers", async (delivery, connection) => {
+  app.addHook("sender:headers", async (delivery) => {
     delivery.headers = delivery.headers || {};
     delivery.headers.lines = delivery.headers.lines || {};
 
