@@ -1,5 +1,5 @@
 # If enabled then WildDuck exposes a limited POP3 interface for listing and fetching emails
-enabled=true
+enabled=false
 port=9995
 # by default bind to localhost only
 host="0.0.0.0"

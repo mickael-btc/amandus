@@ -1,5 +1,5 @@
 # If enabled then WildDuck exposes an IMAP interface for listing and fetching emails
-enabled=true
+enabled=false
 port=9993
 host="0.0.0.0"
 

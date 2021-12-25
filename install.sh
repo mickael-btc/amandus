@@ -4,8 +4,16 @@
 cd ./zone-mta
 npm install
 npm audit fix
-
-# go to root folder
 cd ..
 
+# install node_modules for wildduck
+cd ./wildduck
+npm install
+npm audit fix
+cd ..
 
+# install node_modules for api
+cd ./wildduck
+npm install
+npm audit fix
+cd ..
