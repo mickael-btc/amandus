@@ -3,10 +3,10 @@ version: '3'
 services:
 
   redis:
-    image: "redis"
+    image: redis
     restart: always
     ports:
-      - "127.0.0.1:6379:6379"
+      - 127.0.0.1:6379:6379
     logging:
       driver: none
     networks:
@@ -17,7 +17,7 @@ services:
     image: mongo
     restart: always
     ports:
-      - "127.0.0.1:27017:27017"
+      - 127.0.0.1:27017:27017
     volumes:
       - ./data/mongodb:/data/db
     logging:
@@ -32,7 +32,7 @@ services:
     volumes:
       - ./api:/usr/src/app
     ports:
-      - "127.0.0.1:8513:8513"
+      - 127.0.0.1:8513:8513
     depends_on:
       - mongo
     environment:
@@ -49,8 +49,8 @@ services:
     volumes:
       - ./zone-mta:/usr/src/app
     ports:
-      - "127.0.0.1:12080:12080" # api server
-      - "127.0.0.1:12081:12081" # queue server
+      - 127.0.0.1:12080:12080 # api server
+      - 127.0.0.1:12081:12081 # queue server
     depends_on:
       - redis
       - mongo
