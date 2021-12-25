@@ -1,2 +1,11 @@
-default = ["0.0.0.0", "::"]
-direct = ["0.0.0.0", "::"]
+[[default]]
+address = "0.0.0.0"
+ratio = 1.0
+
+# future use configuration
+# [[default]]
+# address = "0.0.0.0"
+# ratio = 1.0
+
+[[direct]]
+address = "0.0.0.0"
