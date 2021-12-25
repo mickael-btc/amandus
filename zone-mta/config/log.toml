@@ -1,1 +1,1 @@
-level="info" # "silly" "info" "error" "debug"
+level = "info" # "silly" "info" "error" "debug"

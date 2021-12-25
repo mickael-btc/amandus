@@ -1,4 +1,4 @@
 ["modules/zonemta-loop-breaker"]
-enabled="sender"
-secret="hmac"
-algo="md5"
+enabled = "sender"
+secret = "hmac"
+algo = "md5"
