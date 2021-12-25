@@ -5,6 +5,7 @@ const dkimkeygen = require("../service/dkimkeygen");
 
 const logger = require("npmlog");
 
+// TODO: add logging
 router.get("/", async (req, res) => {
   const result = await dkim
     .find({}, ["_id", "domain", "selector"])
@@ -15,6 +16,7 @@ router.get("/", async (req, res) => {
         error: error,
       });
     });
+  logger.info("API/DKIM:GET", "get all dkim records");
   res.json(result);
 });
 
@@ -26,6 +28,7 @@ router.get("/all", async (req, res) => {
       error: error,
     });
   });
+  logger.info("API/DKIM:GET", "get all dkim records - extended");
   res.json(result);
 });
 
@@ -38,6 +41,7 @@ router.get("/:id", async (req, res) => {
       error: error,
     });
   });
+  logger.info("API/DKIM:GET", "get dkim record by id");
   res.json(data);
 });
 
