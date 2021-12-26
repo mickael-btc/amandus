@@ -92,6 +92,7 @@ services:
       - 127.0.0.1:8635:8635
     depends_on:
       - mongo
+      - wildduck
     networks:
       mynetwork:
         ipv4_address: 172.20.0.7
