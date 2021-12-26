@@ -7,5 +7,5 @@ run the installer:
 ```
 then run the server:
 ```bash
-./amandus
+./amandus.sh
 ```
