@@ -21,7 +21,7 @@ module.exports.init = (app, done) => {
       .toLowerCase();
 
     try {
-      const response = await axios.get(`http://api/dkim/current/${fromDomain}`);
+      const response = await axios.get(`http://api:8513/dkim/current/${fromDomain}`);
       // push all signature keys to the key array
       delivery.dkim.keys.push({
         domainName: response.data.domain,
