@@ -64,8 +64,6 @@ services:
         ipv4_address: 172.20.0.5
     tty: true
     command: npm run start
-    # logging:
-    #   driver: none
   
   wildduck:
     build: ./wildduck
@@ -84,6 +82,21 @@ services:
         ipv4_address: 172.20.0.6
     tty: true
     command: npm run start
+
+  raven:
+    build: ./raven
+    restart: always
+    volumes:
+      - ./raven:/usr/src/app
+    ports:
+      - 127.0.0.1:8635:8635
+    depends_on:
+      - mongo
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.7
+    tty: true
+    command: raven start -c "./config.toml"
 
 networks:
   mynetwork:
