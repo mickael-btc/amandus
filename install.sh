@@ -13,7 +13,7 @@ npm audit fix
 cd ..
 
 # install node_modules for api
-cd ./wildduck
+cd ./api
 npm install
 npm audit fix
 cd ..
