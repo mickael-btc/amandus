@@ -114,7 +114,6 @@ router.post("/", (req, res) => {
       if (error) {
         logger.error("API/DKIM", error);
         res.status(500).json({
-          message: error.message,
           error: error,
         });
       } else {
