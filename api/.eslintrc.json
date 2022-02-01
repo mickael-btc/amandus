@@ -17,6 +17,6 @@
       "warn",
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
     ],
-    "indent": ["error", 2, { "SwitchCase": 1 }]
+    "indent": ["warn", 2, { "SwitchCase": 1 }]
   }
 }
