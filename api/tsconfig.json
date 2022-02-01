@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+
+    "module": "commonjs",
+    "rootDir": "./",
+
+    "allowJs": true,
+    "checkJs": true,
+    "maxNodeModuleJsDepth": 1,
+
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+  },
+  "exclude": [
+    "node_modules",
+  ]
+}
